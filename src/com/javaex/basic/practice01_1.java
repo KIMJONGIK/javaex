@@ -8,9 +8,9 @@ public class practice01_1 {
 	public static void main(String[] args) {
 //		Problem01();
 //		Problem02();
-//		Problem03();
+		Problem03();
 //		Problem04();
-		Problem05();
+//		Problem05();
 	}
 	
 	public static void Problem01() {
@@ -29,6 +29,7 @@ public class practice01_1 {
 				System.out.printf("%d", i);
 			}System.out.println("");
 		}
+		scanner.close();
 			
 	}
 	public static void Problem03() {
@@ -64,5 +65,6 @@ public class practice01_1 {
 		int array[] = {num1, num2, num3, num4, num5};
 		Arrays.sort(array);
 		System.out.printf("최대값은 %d입니다.", array[array.length - 1]);	
+		scanner.close();
 	}
 }

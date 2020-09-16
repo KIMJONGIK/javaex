@@ -22,36 +22,53 @@ public class practice01_2 {
 			int k = (num + 1)/2;
 			System.out.printf("%d", k*k);
 			}
+		scanner.close();
 
 	}
 	public static void Problem07() {
+		System.out.println("================");
+		System.out.println("[숫자맞추기게임 시작]");
+		System.out.println("================");
+		
 		double m = Math.random();
 		int num = (int)(m*100);
-		System.out.print(num);
 		boolean key = true;
 		while(key) {
 			Scanner scanner = new Scanner(System.in);
 			System.out.print(">>");
 			int ans = scanner.nextInt();
+			
 			if (ans==num) {
 				System.out.println("맞았습니다.");
-				System.out.print("게임을 종료하시겠습니까?(y/n) >>");
+				System.out.print("게임을 종료하시겠습니까?(y/n) >> ");
 				String a = scanner.next();
-				if (a == "n") {
-					System.out.println("===============");
+				
+				if (a.equals("y") ) {
+					System.out.println("================");
 					System.out.println("[숫자맞추기게임 종료]");
-					System.out.println("===============");
-					break;
-				else {
+					System.out.println("================");
+					key = false;
+					
+				} else if ( a.equals("n")){
+					m = Math.random();
+					num = (int)(m*100);
 					continue;
 				}
+			
 				
-				}
-			}
+			} else if ( ans > num ) {
+				System.out.println("더 낮게");
+				continue;
+			} else if ( ans < num ) {
+				System.out.println("더 높게");
+				continue;
+			}scanner.close();
 		}
-		
-		
+			
 	}
+		
+		
+	
 	public static void Problem08() {
 		boolean key = true;
 		int account = 0;
@@ -93,7 +110,7 @@ public class practice01_2 {
 				System.out.println();
 				continue;
 			}
-			
+			scanner.close();
 		}
 	
 	}
