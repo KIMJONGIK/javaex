@@ -1,7 +1,7 @@
 package com.javaex.oop.summary;
 
 public class KungfuPanda extends Panda implements Kungfu {
-	//	생성장
+	//	생성자
 	public KungfuPanda(String name) {
 		super(name);
 	}
